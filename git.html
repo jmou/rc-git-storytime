@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Awesome Presentation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      /*
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      */
+
+      body { font-family: Helvetica, Arial; }
+      .remark-slide-content { font-size: 30px; }
+      .big { margin-top: -.4em; font-size: 200%; }
+      .small { font-size: 70%; }
+
+      table.timeline {
+        border-collapse: collapse;
+        width: 100%;
+        height: 1em;
+      }
+      table.timeline tr:first-child > td {
+        border-bottom: 1px solid black;
+      }
+      table.timeline td {
+        position: relative;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+      }
+      table.timeline td:last-child {
+        border-right: 1px solid transparent;
+      }
+      div.timeline {
+        position: relative;
+        font-size: 20px;
+      }
+      table.timeline:after {
+        content: '';
+        position: absolute;
+        right: -1em;
+        top: .5px;
+        bottom: 0;
+        border: .5em solid;
+        border-color: transparent transparent transparent black;
+      }
+      table.timeline .label {
+        position: absolute;
+        width: 100%;
+        top: 1ex;
+        left: -50%;
+        text-align: center;
+      }
+      table.timeline .icon {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+      }
+
+      .icon { visibility: hidden; }
+      .dark .icon.dark,
+      .diff .icon.diff,
+      .rcs .icon.rcs,
+      .cvs .icon.cvs,
+      .net .icon.net,
+      .cvs15 .icon.cvs15,
+      .sf .icon.sf,
+      .svn .icon.svn,
+      .rewind .icon.rewind,
+      .unix .icon.unix,
+      .gnu .icon.gnu,
+      .linux .icon.linux,
+      .bk .icon.bk,
+      .git .icon.git,
+      .junio .icon.junio,
+      .github .icon.github,
+      .bday .icon.bday { visibility: visible; }
+
+      table.timeline .u1 { top: -400%; }
+      table.timeline .u2 { top: -1300%; }
+      table.timeline .d1 { top: 600%; }
+      table.timeline .d2 { top: 1300%; }
+      table.timeline .x1 { left: -40%; }
+      table.timeline .x2 { left: -30%; }
+      table.timeline .x3 { left: -20%; }
+      table.timeline .x4 { left: -10%; }
+      table.timeline .x6 { left: 10%; }
+      table.timeline .x7 { left: 20%; }
+      table.timeline .x9 { left: 40%; }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# git storytime
+
+---
+
+# You've seen git
+
+.center[![:width 90%](git-terminal.png)]
+
+---
+
+# But what is git?
+
+- Where did git come from?
+- What is the meaning of git?
+- Are we git in the universe?
+- Is there a higher git?
+- How do I become one with git?
+
+.center[![:width 50%](sistine.jpg)]
+
+---
+
+# But what is git?
+
+- Where did git come from?
+
+![](archaelogy.jpg)
+
+---
+
+# Dark Ages
+
+![:width 100%](dark-1.png)
+
+---
+
+# Dark Ages
+
+![:width 100%](dark-2.png)
+
+---
+
+# Dark Ages
+
+![:width 100%](dark-3.png)
+
+???
+
+pic from Windows. floppy disks. picture of the Internet. file shares. new document 1
+- Dark Ages
+  - copy a file, all manual
+  - not a lot of collaboration. single person or very small teams
+
+---
+
+class: middle
+
+<div class="timeline dark">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+---
+
+# diff
+
+.center[![:width 90%](diff-2.png)]
+
+???
+
+- 1974
+- Hunt–McIlroy algorithm for longest common subsequence
+- space-efficient storage of revisions
+
+---
+
+class: middle
+
+<div class="timeline dark diff">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+---
+
+class: middle
+
+<div class="timeline dark diff rcs">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+???
+
+- first generation of version control
+
+- 1982: RCS
+  - more collaboration, more formal way to store revisions
+  - manage versions of a file by storing series of diffs
+  - limited to a single file
+
+---
+
+class: middle
+
+<div class="timeline dark diff rcs cvs">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+???
+
+- 1986: CVS
+  - script on top of RCS to manage revisions of multiple files in a single _changeset_; operation called a _commit_
+  - introduced notion of a changeset
+  - https://groups.google.com/forum/message/raw?msg=mod.sources/eqze_AHbIK0/uE90wCq3ui4J
+
+---
+
+class: middle
+
+<div class="timeline dark diff rcs cvs net">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+???
+
+- early 90s greatest invention?
+
+---
+
+![:width 100%](internet.png)
+
+---
+
+class: middle
+
+<div class="timeline dark diff rcs cvs cvs15">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+???
+
+- newfangled personal computer
+- didn't have to download all the source code to your 500MB hard drive
+
+- 1995. CVS 1.5
+  - adds client/server
+  - clients only store the current check out. 500MB of hard drive
+  - http://cvs.savannah.gnu.org/viewvc/cvs/ccvs/NEWS?view=markup&revision=1.2
+  - Remote implementation.  This is very helpful when collaborating on a project with someone across a wide-area network.  This release can also be used locally, like other CVS versions, if you have no need for remote access.
+  - reasonably good for development by centralized teams
+
+---
+
+class: middle
+
+<div class="timeline dark diff rcs cvs cvs15 sf">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+???
+
+- 1999. SourceForge
+  - one of the first "forge" development hub
+  - free for open source projects
+  - open source existed on the fringes, first open source revival
+
+---
+
+class: middle
+
+<div class="timeline dark diff rcs cvs cvs15 sf svn">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+???
+
+- 2004. Subversion v1
+  - CVS "done right"
+
+---
+
+class: middle
+
+<div class="timeline cvs cvs15 sf svn">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+---
+
+class: middle
+
+<div class="timeline dark diff rcs cvs cvs15 sf svn rewind">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+---
+
+class: middle
+
+<div class="timeline dark diff rcs cvs cvs15 sf svn unix">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+???
+
+- 1970s. Unix
+  - OS created by Bell Labs
+  - commercially successful
+
+---
+
+class: middle
+
+<div class="timeline dark diff rcs cvs cvs15 sf svn unix gnu">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+???
+
+- 1983. GNU
+  - free OS
+  - no kernel
+
+---
+
+class: middle
+
+<div class="timeline dark diff rcs cvs cvs15 sf svn unix gnu linux">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+???
+
+- 1991. Linux released
+  - Linus Torvalds, university student didn't like existing OS licensing
+  - invited community
+
+cut out
+
+# Linus wasn't scaling
+
+- Applying everyone's changes took hours
+- Kernel release took a full year
+- Patches being accidentally dropped
+- Community concerned Linus would burnout
+
+- Linus
+  - bottleneck for any change to go into the kernel
+  - needs to do a LOT of merges
+
+---
+
+# It's a hit!
+
+.center[![](linus.jpg)]
+
+---
+
+# It's a hit!
+
+<div style="position: relative">
+<div style="position: absolute; font-size: 15em; width: 100%; text-align: center">😅</div>
+.center[![](linus.jpg)]
+</div>
+
+---
+
+class: middle
+
+<div class="timeline dark diff rcs cvs cvs15 sf svn unix gnu linux bk">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+???
+
+- BitKeeper gets free advertising from Linux
+- Linux gets to use BitKeeper for free, even though it's not open source
+
+- each developer workstation has its own full copy of the repository
+  - FAST, especially merges
+- ~similar time first DVCS
+  - changeset-based
+    - no file locking
+  - non-linear history
+  - most operations are local
+    - full repository locally
+  - optimized for merges
+  - paradigm shifts
+
+---
+
+# L-pocalypse
+
+- BitKeeper revokes its license from Linux
+  - BitKeeper is closed source
+  - Dev tried to reverse engineer its protocol
+- Linux development stops indefinitely
+
+.center[![:width 60%](l-shutdown.jpg)]
+
+.small[[LWN: The kernel and BitKeeper part ways](https://lwn.net/Articles/130746/)]
+
+???
+
+- 2005 April. BitKeeper falling out
+  - like L train shutdown
+  - BitKeeper was commercial and closed source, but offered a free license. Reverse engineering lost favor with vendor
+  - https://lwn.net/Articles/130746/
+
+---
+
+# jk!
+
+<iframe src="http://lkml.iu.edu/hypermail/linux/kernel/0504.0/2022.html" style="border: 0; width: 100%"></iframe>
+
+.center[![:width 50%](averted.jpg)]
+
+???
+
+  - cuomo "psych!"
+  - https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290
+  - http://lkml.iu.edu/hypermail/linux/kernel/0504.0/2022.html
+  - why named git?
+
+---
+
+class: middle
+
+<div class="timeline dark diff rcs cvs cvs15 sf svn unix gnu linux bk junio">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+???
+
+- Git 1.5
+  - first usable release
+  - Junio Hamano
+  - https://lwn.net/Articles/222086/
+
+---
+
+class: middle
+
+<div class="timeline dark diff rcs cvs cvs15 sf svn unix gnu linux bk junio github">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+???
+
+- 2009. GitHub
+  - free forge for open source software
+  - culture shift toward mainstream open source
+
+---
+
+# TODO write an ending
+
+---
+
+class: middle
+
+<div class="timeline dark diff rewind rcs cvs net cvs15 sf svn unix gnu linux bk git junio github bday">
+  <table class="timeline"> <tr> <td> <div class="icon x7 u2 dark"><img src="winter.jpg" style="width: 6em"></div> <div class="icon x4 u1 diff">diff</div> <div class="icon x2 d1 rewind big">➡️</div> <div class="icon x5 d1 unix">Unix</div> </td> <td> <div class="icon x2 u1 rcs">RCS</div> <div class="icon x6 u1 cvs">CVS</div> <div class="icon x3 d1 gnu"><img src="gnu.png" style="width: 4em"></div> </td> <td> <div class="icon x9 u2 sf"><img src="sf.jpg" style="width: 7em"></div> <div class="icon x4 u1 net big">❓</div> <div class="icon x5 u1 cvs15"><img src="net.png" style="width: 2em"></div> <div class="icon x1 d1 linux"><img src="tux.png" style="width: 4em"></div> </td> <td> <div class="icon x1 u1 svn"><img src="svn.png" style="width: 4em"></div> <div class="icon x1 d1 bk"><img src="bk.png" style="width: 3em"></div> <div class="icon x5 d2 git"><img src="git.png" style="width: 4em"></div> <div class="icon x7 d1 junio"><img src="junio.jpg" style="width: 3em"></div> <div class="icon x9 u1 github"><img src="github.png" style="width: 4em"></div> </td> <td> <div class="icon x5 u1 bday"></div> </td> </tr>
+    <tr><td><div class="label">1970</div></td><td><div class="label">1980</div></td><td><div class="label">1990</div></td><td><div class="label">2000</div></td><td><div class="label">2010</div></td></tr>
+  </table>
+</div>
+
+---
+
+# TODO
+
+
+---
+
+- VCS intro
+  - pixelapse analogy of version control?
+    - or later stage VCS: communication, collaboration. eng hub, build and deployment
+  - understand changes over time
+  - facilitate communication and sharing
+  - hub of software development ecosystem
+
+- plumbing & porcelain
+- everything else that has been built on top of git
+- reflect on open source
+
+- evolution
+  - perfect is the enemy of good
+    - inconsistencies galore
+    - porcelains abandoned
+  - nothing is precious
+
+- unusual perspective on git
+- share a passion. what are you passionate about?
+- know your tools
+- learn from its experience
+- dialog of innovation
+- design tradeoffs
+- complex systems evolve from simple solution increments
+- successful despite terrible ux
+
+---
+
+class: center, middle
+
+# My Awesome Presentation
+
+???
+
+Notes for the _first_ slide!
+
+---
+
+# Agenda
+
+1. Introduction
+2. Deep-dive
+3. ...
+
+[NOTE]: Note that you need active internet connection to access remark.js script file
+---
+
+# Introduction
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      remark.macros.width = function (percentage) {
+          var url = this;
+          return '<img src="' + url + '" style="width: ' + percentage + '" />';
+      };
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
